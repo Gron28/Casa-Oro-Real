@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Oro Real - Restauración de Elementos Litúrgicos</title>
+    <meta name="description" content="Servicio artesanal de restauración y baño de oro y plata para cálices, custodias, sagrarios y todo tipo de orfebrería litúrgica.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="lang-es-active">
+
+    <header class="mobile-header">
+        <a href="#home" class="mobile-logo">
+            <img src="images/logo.png" alt="Casa Oro Real Logo">
+        </a>
+        <button class="nav-toggle" aria-label="Abrir menú de navegación">
+            <span class="hamburger"></span>
+        </button>
+    </header>
+
+    <div class="mobile-nav">
+        <button class="mobile-nav-close" aria-label="Cerrar menú de navegación">×</button>
+        <nav class="mobile-nav-links">
+            <a href="#proceso"><span data-lang="es">Proceso</span><span data-lang="pt">Processo</span></a>
+            <a href="#galeria"><span data-lang="es">Galería</span><span data-lang="pt">Galeria</span></a>
+            <a href="#contacto"><span data-lang="es">Contacto</span><span data-lang="pt">Contato</span></a>
+        </nav>
+        <div class="lang-switcher">
+            <button class="lang-es" onclick="setLanguage('es')">Español</button> /
+            <button class="lang-pt" onclick="setLanguage('pt')">Português</button>
+        </div>
+    </div>
+
+    <div class="desktop-header-wrapper">
+        <header class="main-header">
+            <div class="container header-container">
+                <nav class="header-nav nav-left">
+                    <a href="#proceso"><span data-lang="es">Proceso</span><span data-lang="pt">Processo</span></a>
+                    <a href="#galeria"><span data-lang="es">Galería</span><span data-lang="pt">Galeria</span></a>
+                </nav>
+
+                <a href="#home" class="main-logo">
+                    <img src="images/logo.png" alt="Casa Oro Real Logo">
+                </a>
+
+                <nav class="header-nav nav-right">
+                    <a href="#contacto"><span data-lang="es">Contacto</span><span data-lang="pt">Contato</span></a>
+                    <div class="lang-switcher">
+                        <button class="lang-es" onclick="setLanguage('es')">Español</button> /
+                        <button class="lang-pt" onclick="setLanguage('pt')">Português</button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <main>
+
+        <section class="hero" id="home">
+            <div class="container hero-container">
+                <div class="comparison-slider-wrapper">
+                    <div class="comparison-slider" id="comparison-slider">
+                        <div class="comparison-item image-before">
+                            <img src="images/hero-before.png" alt="Cáliz antes de la restauración">
+                        </div>
+                        <div class="comparison-item image-after">
+                            <img src="images/hero-after.png" alt="Cáliz después de la restauración">
+                        </div>
+                        <div class="slider-handle">
+                            <div class="handle-arrows"></div>
+                        </div>
+                    </div>
+                    <p class="slider-helper-text">
+                        <span data-lang="es">Arrastre para comparar antes y después</span>
+                        <span data-lang="pt">Arraste para comparar antes e depois</span>
+                    </p>
+                </div>
+                
+                <div class="hero-text">
+                    <h1><span data-lang="es">Restauración de elementos litúrgicos</span><span data-lang="pt">Restauração de elementos litúrgicos</span></h1>
+                    <p><span data-lang="es">Servicio artesanal de restauración y baño de oro y plata para objetos litúrgicos. Unimos tradición y técnica para preservar la dignidad de cada pieza.</span><span data-lang="pt">Serviço artesanal de restauração e banho de ouro e prata para objetos litúrgicos. Unimos tradição e técnica para preservar a dignidade de cada peça.</span></p>
+                    <ul class="hero-checklist">
+                        <li><i class="fa-solid fa-check"></i> <span data-lang="es">Primera pieza gratis, como muestra.</span><span data-lang="pt">Primeira peça grátis, como amostra.</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-lang="es">Garantía de 2 a 3 años en todos nuestros baños.</span><span data-lang="pt">Garantia de 2 a 3 anos em todos os nossos banhos.</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-lang="es">Atención especializada en español y portugués.</span><span data-lang="pt">Atendimento especializado em espanhol e português.</span></li>
+                    </ul>
+                    <a href="https://wa.me/5491165728243" target="_blank" class="btn"><i class="fab fa-whatsapp"></i> <span data-lang="es">Contactar por WhatsApp</span><span data-lang="pt">Contatar pelo WhatsApp</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section" id="galeria">
+            <div class="container">
+                <h2><span data-lang="es">Galería de Trabajos</span><span data-lang="pt">Galeria de Trabalhos</span></h2>
+                <div class="title-underline"></div>
+                
+                <div class="gallery-accordion">
+                    <div class="gallery-category-section is-open">
+                        <button class="category-toggle" aria-expanded="true">
+                            <h3><span data-lang="es">Cálices</span><span data-lang="pt">Cálices</span></h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="category-grid">
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Cáliz</span><span data-lang="pt">Cálice</span></h4></div><img class="photo-after" src="images/gallery/caliz-01-after.jpg" alt="Cáliz restaurado"><img class="photo-before" src="images/gallery/caliz-01-before.jpg" alt="Cáliz antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Cáliz</span><span data-lang="pt">Cálice</span></h4></div><img class="photo-after" src="images/gallery/caliz-02-after.jpg" alt="Cáliz restaurado"><img class="photo-before" src="images/gallery/caliz-02-before.jpg" alt="Cáliz antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Cáliz</span><span data-lang="pt">Cálice</span></h4></div><img class="photo-after" src="images/gallery/caliz-03-after.jpg" alt="Cáliz restaurado"><img class="photo-before" src="images/gallery/caliz-03-before.jpg" alt="Cáliz antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Cáliz</span><span data-lang="pt">Cálice</span></h4></div><img class="photo-after" src="images/gallery/caliz-04-after.jpg" alt="Cáliz restaurado"><img class="photo-before" src="images/gallery/caliz-04-before.jpg" alt="Cáliz antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Cáliz</span><span data-lang="pt">Cálice</span></h4></div><img class="photo-after" src="images/gallery/caliz-05-after.jpg" alt="Cáliz restaurado"><img class="photo-before" src="images/gallery/caliz-05-before.jpg" alt="Cáliz antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Cáliz</span><span data-lang="pt">Cálice</span></h4></div><img class="photo-after" src="images/gallery/caliz-06-after.jpg" alt="Cáliz restaurado"><img class="photo-before" src="images/gallery/caliz-06-before.jpg" alt="Cáliz antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Cáliz</span><span data-lang="pt">Cálice</span></h4></div><img class="photo-after" src="images/gallery/caliz-07-after.jpg" alt="Cáliz restaurado"><img class="photo-before" src="images/gallery/caliz-07-before.jpg" alt="Cáliz antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Cáliz</span><span data-lang="pt">Cálice</span></h4></div><img class="photo-after" src="images/gallery/caliz-08-after.jpg" alt="Cáliz restaurado"><img class="photo-before" src="images/gallery/caliz-08-before.jpg" alt="Cáliz antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-category-section is-open">
+                        <button class="category-toggle" aria-expanded="true">
+                            <h3><span data-lang="es">Custodias</span><span data-lang="pt">Custódias</span></h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="category-grid">
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Custodia</span><span data-lang="pt">Custódia</span></h4></div><img class="photo-after" src="images/gallery/custodia-01-after.jpg" alt="Custodia restaurada"><img class="photo-before" src="images/gallery/custodia-01-before.jpg" alt="Custodia antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Custodia</span><span data-lang="pt">Custódia</span></h4></div><img class="photo-after" src="images/gallery/custodia-02-after.jpg" alt="Custodia restaurada"><img class="photo-before" src="images/gallery/custodia-02-before.jpg" alt="Custodia antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="static"><div class="photo-info"><h4><span data-lang="es">Custodia</span><span data-lang="pt">Custódia</span></h4></div><img class="photo-after" src="images/gallery/custodia-03-after.jpg" alt="Custodia restaurada"></div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-category-section is-open">
+                        <button class="category-toggle" aria-expanded="true">
+                            <h3><span data-lang="es">Copones y Ciborios</span><span data-lang="pt">Copones e Cibórios</span></h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="category-grid">
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Copón</span><span data-lang="pt">Copón</span></h4></div><img class="photo-after" src="images/gallery/copon-01-after.jpg" alt="Copón restaurado"><img class="photo-before" src="images/gallery/copon-01-before.jpg" alt="Copón antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Copón</span><span data-lang="pt">Copón</span></h4></div><img class="photo-after" src="images/gallery/copon-02-after.jpg" alt="Copón restaurado"><img class="photo-before" src="images/gallery/copon-02-before.jpg" alt="Copón antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Copón</span><span data-lang="pt">Copón</span></h4></div><img class="photo-after" src="images/gallery/copon-03-after.jpg" alt="Copón restaurado"><img class="photo-before" src="images/gallery/copon-03-before.jpg" alt="Copón antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Ciborio</span><span data-lang="pt">Cibório</span></h4></div><img class="photo-after" src="images/gallery/ciborio-01-after.jpg" alt="Ciborio restaurado"><img class="photo-before" src="images/gallery/ciborio-01-before.jpg" alt="Ciborio antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Ciborio</span><span data-lang="pt">Cibório</span></h4></div><img class="photo-after" src="images/gallery/ciborio-02-after.jpg" alt="Ciborio restaurado"><img class="photo-before" src="images/gallery/ciborio-02-before.jpg" alt="Ciborio antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-category-section is-open">
+                        <button class="category-toggle" aria-expanded="true">
+                            <h3><span data-lang="es">Orfebrería de Altar y Otros</span><span data-lang="pt">Ourivesaria de Altar e Outros</span></h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="category-grid">
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Sagrario</span><span data-lang="pt">Sacrário</span></h4></div><img class="photo-after" src="images/gallery/sagrario-01-after.jpg" alt="Sagrario restaurado"><img class="photo-before" src="images/gallery/sagrario-01-before.jpg" alt="Sagrario antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Candelabro</span><span data-lang="pt">Candelabro</span></h4></div><img class="photo-after" src="images/gallery/candelabro-01-after.jpg" alt="Candelabro restaurado"><img class="photo-before" src="images/gallery/candelabro-01-before.jpg" alt="Candelabro antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Candelabro</span><span data-lang="pt">Candelabro</span></h4></div><img class="photo-after" src="images/gallery/candelabro-02-after.jpg" alt="Candelabro restaurado"><img class="photo-before" src="images/gallery/candelabro-02-before.jpg" alt="Candelabro antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Candelabro</span><span data-lang="pt">Candelabro</span></h4></div><img class="photo-after" src="images/gallery/candelabro-03-after.jpg" alt="Candelabro restaurado"><img class="photo-before" src="images/gallery/candelabro-03-before.jpg" alt="Candelabro antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Patena</span><span data-lang="pt">Patena</span></h4></div><img class="photo-after" src="images/gallery/patena-01-after.jpg" alt="Patena restaurada"><img class="photo-before" src="images/gallery/patena-01-before.jpg" alt="Patena antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Crismera</span><span data-lang="pt">Crismera</span></h4></div><img class="photo-after" src="images/gallery/crismera-01-after.jpg" alt="Crismera restaurada"><img class="photo-before" src="images/gallery/crismera-01-before.jpg" alt="Crismera antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Campana</span><span data-lang="pt">Sineta</span></h4></div><img class="photo-after" src="images/gallery/campana-01-after.jpg" alt="Campana restaurada"><img class="photo-before" src="images/gallery/campana-01-before.jpg" alt="Campana antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="comparison"><div class="photo-info"><h4><span data-lang="es">Campana</span><span data-lang="pt">Sineta</span></h4></div><img class="photo-after" src="images/gallery/campana-02-after.jpg" alt="Campana restaurada"><img class="photo-before" src="images/gallery/campana-02-before.jpg" alt="Campana antes"><button class="photo-toggle-btn prev" aria-label="Ver anterior"><</button><button class="photo-toggle-btn next" aria-label="Ver siguiente">></button></div>
+                            <div class="gallery-photo" data-type="static"><div class="photo-info"><h4><span data-lang="es">Crucifijo</span><span data-lang="pt">Crucifixo</span></h4></div><img class="photo-after" src="images/gallery/crucifijo-01-after.jpg" alt="Crucifijo restaurado"></div>
+                            <div class="gallery-photo" data-type="static"><div class="photo-info"><h4><span data-lang="es">Incensario</span><span data-lang="pt">Turíbulo</span></h4></div><img class="photo-after" src="images/gallery/incienso-01-after.jpg" alt="Incensario restaurado"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="gallery-disclaimer">
+                    <span data-lang="es">Esto es solo una muestra. Podemos restaurar más de 40 tipos de objetos litúrgicos. Y no dude en consultar al respecto.</span>
+                    <span data-lang="pt">Esta é apenas uma amostra. Podemos restaurar mais de 40 tipos de objetos litúrgicos. E não hesite em nos consultar a respeito.</span>
+                </p>
+            </div>
+        </section>
+
+        <section class="process" id="proceso">
+            <div class="container">
+                <h2><span data-lang="es">Nuestro Proceso de Confianza</span><span data-lang="pt">Nosso Processo de Confiança</span></h2>
+                <div class="title-underline"></div>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="process-number">1</div>
+                        <h3><span data-lang="es">Visita y Demostración</span><span data-lang="pt">Visita e Demonstração</span></h3>
+                        <p><span data-lang="es">Un representante de confianza le visita y retira una pieza para una demostración gratuita de nuestro trabajo.</span><span data-lang="pt">Um representante de confiança visita e retira uma peça para uma demonstração gratuita do nosso trabalho.</span></p>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-number">2</div>
+                        <h3><span data-lang="es">Presupuesto y Retiro</span><span data-lang="pt">Orçamento e Retirada</span></h3>
+                        <p><span data-lang="es">Evaluamos sus piezas, le hacemos un presupuesto en el acto y, si está de acuerdo, las retiramos.</span><span data-lang="pt">Avaliamos suas peças, fazemos um orçamento no ato e, se concordar, as retiramos.</span></p>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-number">3</div>
+                        <h3><span data-lang="es">Restauración Artesanal</span><span data-lang="pt">Restauração Artesanal</span></h3>
+                        <p><span data-lang="es">Nuestros artesanos devuelven el esplendor a sus objetos en un plazo de 7 a 10 días.</span><span data-lang="pt">Nossos artesãos devolvem o esplendor aos seus objetos em um prazo de 7 a 10 dias.</span></p>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-number">4</div>
+                        <h3><span data-lang="es">Entrega y Garantía</span><span data-lang="pt">Entrega e Garantia</span></h3>
+                        <p><span data-lang="es">Le devolvemos sus artículos religiosos restaurados, con una garantía de 2 años sobre nuestro trabajo.</span><span data-lang="pt">Devolvemos seus artigos religiosos restaurados, com uma garantia de 2 anos sobre nosso trabalho.</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta" id="contacto">
+            <div class="container">
+                <h2><span data-lang="es">¿Listo para restaurar sus piezas?</span><span data-lang="pt">Pronto para restaurar suas peças?</span></h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle"><span data-lang="es">Póngase en contacto con nosotros. Será un honor atenderle y devolverle la belleza a sus objetos más preciados.</span><span data-lang="pt">Entre em contato conosco. Será uma honra atendê-lo e devolver a beleza aos seus objetos mais preciosos.</span></p>
+                <br>
+                <div class="contact-details">
+                    <a href="tel:+5491145728243"><i class="fa-solid fa-phone"></i> +54 9 11 4572 8243</a>
+                    <a href="mailto:ar57732@gmail.com"><i class="fa-solid fa-envelope"></i> ar57732@gmail.com</a>
+                </div>
+                <a href="https://wa.me/5491165728243" target="_blank" class="btn"><i class="fab fa-whatsapp"></i> <span data-lang="es">Enviar Mensaje por WhatsApp</span><span data-lang="pt">Enviar Mensagem pelo WhatsApp</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>CASA ORO REAL</h4>
+                    <p><span data-lang="es">Preservando el legado y la belleza del arte litúrgico para futuras generaciones.</span><span data-lang="pt">Preservando o legado e a beleza da arte litúrgica para as futuras gerações.</span></p>
+                </div>
+                <div class="footer-col">
+                    <h4><span data-lang="es">Navegación</span><span data-lang="pt">Navegação</span></h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#galeria"><span data-lang="es">Galería</span><span data-lang="pt">Galeria</span></a></li>
+                        <li><a href="#proceso"><span data-lang="es">El Proceso</span><span data-lang="pt">O Processo</span></a></li>
+                        <li><a href="#contacto"><span data-lang="es">Contacto</span><span data-lang="pt">Contato</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4><span data-lang="es">Servicios</span><span data-lang="pt">Serviços</span></h4>
+                    <ul>
+                        <li><span data-lang="es">Baño de Oro</span><span data-lang="pt">Banho de Ouro</span></li>
+                        <li><span data-lang="es">Baño de Plata</span><span data-lang="pt">Banho de Prata</span></li>
+                        <li><span data-lang="es">Reparaciones</span><span data-lang="pt">Reparos</span></li>
+                        <li><span data-lang="es">Pulido y Limpieza</span><span data-lang="pt">Polimento e Limpeza</span></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4><span data-lang="es">Contacto</span><span data-lang="pt">Contato</span></h4>
+                    <p>+54 9 11 4572 8243<br>ar57732@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p><span data-lang="es">© 2025 Casa Oro Real. Todos los derechos reservados.</span><span data-lang="pt">© 2024 Casa Oro Real. Todos os direitos reservados.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5491165728243" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
