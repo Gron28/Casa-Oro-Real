@@ -247,7 +247,10 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p><span data-lang="es">© 2025 Casa Oro Real. Todos los derechos reservados.</span><span data-lang="pt">© 2024 Casa Oro Real. Todos os direitos reservados.</span></p>
+                <p>
+                    <span data-lang="es">© <span class="current-year"></span> Casa Oro Real. Todos los derechos reservados.</span>
+                    <span data-lang="pt">© <span class="current-year"></span> Casa Oro Real. Todos os direitos reservados.</span>
+                </p>
             </div>
         </div>
     </footer>
@@ -255,6 +258,22 @@
     <a href="https://wa.me/5491165728243" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
+    <div id="lightbox-modal" style="display: none;">
+        <div class="lightbox-overlay"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="Cerrar vista ampliada">×</button>
+            <div class="lightbox-images">
+                <div class="lightbox-image-container">
+                    <h4 class="lightbox-title"><span data-lang="es">Antes</span><span data-lang="pt">Antes</span></h4>
+                    <img id="lightbox-img-before" src="" alt="Imagen antes de la restauración">
+                </div>
+                <div class="lightbox-image-container">
+                    <h4 class="lightbox-title"><span data-lang="es">Después</span><span data-lang="pt">Depois</span></h4>
+                    <img id="lightbox-img-after" src="" alt="Imagen después de la restauración">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 
