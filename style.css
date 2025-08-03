@@ -438,7 +438,7 @@ body.lang-pt-active .mobile-nav .lang-pt {
     }
 
     .lightbox-image-container img {
-        max-height: 65vh;
+        max-height: 30vh;
     }
 
     .lightbox-images:not(.single-image-mode) .lightbox-title {
