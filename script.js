@@ -44,9 +44,11 @@ document.addEventListener('DOMContentLoaded', function() {
             handle.style.left = `${percentage}%`;
         };
         
-        const startDrag = () => {
+        const startDrag = (eventType) => {
             isDragging = true;
-            document.body.classList.add('slider-is-dragging');
+            if (eventType === 'touch') {
+                document.body.classList.add('slider-is-dragging');
+            }
         };
 
         const stopDrag = () => {
@@ -58,16 +60,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const dragMove = (e, clientX) => {
             if (isDragging) {
-                e.preventDefault();
+                if (e.type === 'touchmove') {
+                    e.preventDefault();
+                }
                 setSliderPosition(clientX);
             }
         };
 
-        handle.addEventListener('mousedown', (e) => { e.preventDefault(); startDrag(); });
+        handle.addEventListener('mousedown', (e) => { e.preventDefault(); startDrag('mouse'); });
         document.addEventListener('mouseup', stopDrag);
         document.addEventListener('mousemove', (e) => dragMove(e, e.clientX));
         
-        handle.addEventListener('touchstart', (e) => { e.preventDefault(); startDrag(); }, { passive: false });
+        handle.addEventListener('touchstart', (e) => { startDrag('touch'); }, { passive: true }); 
         document.addEventListener('touchend', stopDrag);
         document.addEventListener('touchmove', (e) => dragMove(e, e.touches[0].clientX), { passive: false });
     };
