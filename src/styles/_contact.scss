@@ -1,0 +1,48 @@
+// ==========================================================================
+// CONTACT
+// Final CTA section
+// ==========================================================================
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.final-cta {
+    padding: 4rem 0;
+    text-align: center;
+    background: $color-white;
+
+    @include respond-to('lg') {
+        padding: 3rem 0;
+    }
+}
+
+.contact-details {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    @include respond-to('md') {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-text;
+        font-weight: 600;
+        font-size: 1.1rem;
+        @include transition(color);
+
+        &:hover,
+        &:focus-visible {
+            color: $color-gold;
+        }
+    }
+
+    i {
+        color: $color-gold;
+        margin-right: 0.5rem;
+    }
+}

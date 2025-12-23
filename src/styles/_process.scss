@@ -1,0 +1,69 @@
+// ==========================================================================
+// PROCESS
+// Trust process steps section
+// ==========================================================================
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.process {
+    padding: 4rem 0;
+
+    @include respond-to('lg') {
+        padding: 3rem 0;
+    }
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+
+    @include respond-to('lg') {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    @include respond-to('md') {
+        grid-template-columns: 1fr;
+    }
+}
+
+.process-step {
+    h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.process-number {
+    width: 50px;
+    height: 50px;
+    border: 2px solid $color-gold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-gold;
+    font-family: $font-heading;
+    @include transition(color 0.3s ease, border-color 0.3s ease);
+}
+
+.process-step:nth-child(1) .process-number {
+    color: $color-dark-blue;
+    border-color: $color-dark-blue;
+}
+
+.process-step:nth-child(2) .process-number {
+    color: #7b6f55;
+    border-color: #7b6f55;
+}
+
+.process-step:nth-child(3) .process-number {
+    color: #a48c56;
+    border-color: #a48c56;
+}

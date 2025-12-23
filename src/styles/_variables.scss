@@ -1,0 +1,37 @@
+// ==========================================================================
+// VARIABLES
+// Brand colors, typography, and design tokens
+// ==========================================================================
+
+// Brand Colors
+$color-gold: #c09f58 !default;
+$color-gold-dark: #a88a4a !default;
+$color-dark-blue: #2c3e50 !default;
+$color-cream-bg: #FFFEF9 !default;
+$color-text: #4a4a4a !default;
+$color-white: #ffffff !default;
+$color-light-gray: #e9e2d7 !default;
+$color-border: #ddd !default;
+$color-whatsapp: #25D366 !default;
+
+// Typography
+$font-heading: 'EB Garamond', serif !default;
+$font-body: 'Source Sans Pro', sans-serif !default;
+
+// Layout
+$header-height: 80px !default;
+$container-width: 1100px !default;
+
+// Border Radius
+$border-radius-sm: 3px !default;
+$border-radius-lg: 8px !default;
+
+// Shadows
+$shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.07) !default;
+$shadow-md: 0 4px 15px rgba(0, 0, 0, 0.1) !default;
+
+// Breakpoints
+$breakpoint-xl: 1200px !default;
+$breakpoint-lg: 992px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-sm: 480px !default;

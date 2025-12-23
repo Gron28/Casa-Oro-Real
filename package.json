@@ -1,0 +1,21 @@
+{
+  "name": "casa-oro-real",
+  "version": "1.0.0",
+  "description": "Bilingual landing page for Casa Oro Real, a liturgical restoration service in Argentina",
+  "scripts": {
+    "sass": "sass src/styles/main.scss style.css --style=compressed --no-source-map",
+    "sass:watch": "sass src/styles/main.scss style.css --watch",
+    "sass:dev": "sass src/styles/main.scss style.css --style=expanded"
+  },
+  "keywords": [
+    "liturgical",
+    "restoration",
+    "gold-plating",
+    "argentina"
+  ],
+  "author": "Felipe Villada",
+  "license": "SEE LICENSE FILE",
+  "devDependencies": {
+    "sass": "^1.69.0"
+  }
+}

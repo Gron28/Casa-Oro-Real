@@ -1,0 +1,231 @@
+// ==========================================================================
+// GALLERY
+// Gallery section with accordion and photo toggler
+// ==========================================================================
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.gallery-section {
+    padding: 4rem 0;
+    background: $color-white;
+
+    @include respond-to('lg') {
+        padding: 3rem 0;
+    }
+}
+
+.gallery-accordion {
+    border-top: 1px solid $color-border;
+}
+
+.gallery-category-section {
+    border-bottom: 1px solid $color-border;
+}
+
+.category-toggle {
+    background: none;
+    border: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 0.5rem;
+    cursor: pointer;
+    text-align: left;
+
+    h3 {
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: 400;
+
+        @include respond-to('lg') {
+            font-size: 1.5rem;
+        }
+
+        @include respond-to('sm') {
+            font-size: 1.3rem;
+        }
+    }
+
+    i {
+        font-size: 1.2rem;
+        color: $color-gold;
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+.gallery-category-section.is-open .category-toggle i {
+    transform: rotate(180deg);
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+
+    .gallery-category-section.is-open & {
+        max-height: 2000px;
+        padding: 0.5rem 0.5rem 2rem 0.5rem;
+    }
+
+    @include respond-to('xl') {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    @include respond-to('lg') {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include respond-to('md') {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+    }
+
+    @include respond-to('sm') {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.gallery-photo {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border-radius: $border-radius-sm;
+    overflow: hidden;
+    border-width: 2px;
+    border-style: solid;
+    cursor: pointer;
+    @include transition(transform 0.3s ease, box-shadow 0.3s ease, border-color 0.4s ease);
+
+    &[data-type="static"],
+    &[data-type="comparison"] {
+        border-color: $color-gold;
+    }
+
+    &.is-showing-before {
+        border-color: $color-dark-blue;
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.4s ease-in-out;
+    }
+
+    .photo-before {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .photo-after {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    &.is-showing-before {
+        .photo-before {
+            opacity: 1;
+        }
+
+        .photo-after {
+            opacity: 0;
+        }
+    }
+}
+
+.photo-toggle-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    background: rgba(255, 255, 255, 0.7);
+    color: $color-dark-blue;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 28px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    @include transition(opacity 0.3s ease, background-color 0.3s ease);
+
+    .gallery-photo:hover & {
+        opacity: 1;
+    }
+
+    &:hover {
+        background: $color-white;
+    }
+
+    &.prev {
+        left: 8px;
+        display: none;
+    }
+
+    &.next {
+        right: 8px;
+        display: block;
+    }
+
+    .gallery-photo.is-showing-before &.prev {
+        display: block;
+    }
+
+    .gallery-photo.is-showing-before &.next {
+        display: none;
+    }
+
+    @include respond-to('lg') {
+        opacity: 0.7;
+    }
+}
+
+.photo-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    padding: 1.5rem 0.75rem 0.5rem;
+    opacity: 0;
+    pointer-events: none;
+    @include transition(opacity);
+
+    .gallery-photo:hover & {
+        opacity: 1;
+    }
+
+    h4 {
+        color: $color-white;
+        font-family: $font-body;
+        font-size: 0.85rem;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    @include respond-to('lg') {
+        opacity: 1;
+    }
+}
+
+.gallery-disclaimer {
+    text-align: center;
+    max-width: 600px;
+    margin: 2rem auto 0 auto;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #6c757d;
+}
